@@ -1,0 +1,32 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "constexpr_test",
+    srcs = ["constexpr_test.cpp"],
+    deps = ["//:rational"],
+)
+
+cc_test(
+    name = "expected_compile_12",
+    srcs = ["expected_compile_12.cpp"],
+    deps = ["//:rational"],
+)
+
+cc_test(
+    name = "rational_example",
+    srcs = ["rational_example.cpp"],
+    deps = ["//:rational"],
+)
+
+cc_test(
+    name = "rational_test",
+    srcs = ["rational_test.cpp"],
+    deps = [
+        "//:rational",
+        "@boost//config",
+        "@boost//mpl",
+        "@boost//preprocessor",
+        "@boost//integer",
+        "@boost//test",
+    ],
+)

@@ -1,0 +1,16 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "rational",
+    visibility = ["//visibility:public"],
+    includes = ["include"],
+    hdrs = glob(["include/boost/**/*.hpp"]),
+    deps = [
+        "@boost//config",
+        "@boost//type_traits",
+        "@boost//utility",
+        "@boost//throw_exception",
+        "@boost//static_assert",
+        "@boost//integer",
+    ],
+)
