@@ -23,10 +23,10 @@ cc_test(
     srcs = ["rational_test.cpp"],
     deps = [
         "//:rational",
-        "@boost//config",
-        "@boost//mpl",
-        "@boost//preprocessor",
-        "@boost//integer",
-        "@boost//test",
+        "@boost//libs/config",
+        "@boost//libs/mpl",
+        "@boost//libs/preprocessor",
+        "@boost//libs/integer",
+        "@boost//libs/test",
     ],
 )
